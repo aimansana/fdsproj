@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fertilizer Description</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Font styles and background color */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e0f7fa; /* Light cyan background */
+      padding: 20px;
+    }
+    /* Top Bar */
+    .top-bar {
+            background-color: #4A772F;
+            color: #f5deb3;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2c3e50;
+            padding: 15px 5%;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover, 
+        nav ul li a.active {
+            background-color: #008000;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      color: #4CAF50;
+      font-size: 36px;
+      letter-spacing: 2px;
+      font-family: 'Courier New', Courier, monospace; /* Monospace font for the header */
+      text-transform: uppercase;
+    }
+
+    #fertilizer-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .fertilizer-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .fertilizer-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .fertilizer-card h2 {
+      color: #2d2d2d;
+      margin-bottom: 15px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .fertilizer-card p {
+      color: #666;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .fertilizer-card .stock {
+      font-weight: bold;
+      color: #28a745;
+      font-size: 18px;
+    }
+
+    .fertilizer-card .benefits {
+      text-align: left;
+      color: #333;
+      font-size: 14px;
+      margin-top: 10px;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #2d2d2d;
+      font-size: 14px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* Colors for the fertilizer cards */
+    .urea { background-color: #a7d8ff; }
+    .dap { background-color: #f0d67e; }
+    .mop { background-color: #ff6f61; }
+    .npk { background-color: #ffb74d; }
+    .super-phosphate { background-color: #81c784; }
+    .organic-compost { background-color: #ffb0c3; }
+    .ammonium-sulfate { background-color: #ffd54f; }
+    .vermicompost { background-color: #a5d6a7; }
+    .calcium-nitrate { background-color: #ffeb3b; }
+    .magnesium-sulfate { background-color: #8e44ad; }
+    .borax { background-color: #e74c3c; }
+    .seaweed-extract { background-color: #1e88e5; }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Header Section -->
+    <header>
+      <div class="top-bar">
+          <span><i class="fas fa-landmark"></i> भारत सरकार | Government of India, Ministry of Agriculture & Farmers Welfare</span>
+      </div>
+      <nav>
+          <div class="logo">
+              <img src="images/firm_logo1.png" alt="Left Logo">
+          </div>
+          <ul>
+              <li><a href="./index.html"><i class="fas fa-home"></i>🏡 Home</a></li>
+              <li><a href="./aboutUs.html" class="active"><i class="fas fa-info-circle"></i>ℹ️ About</a></li>
+              <li><a href="./FarmerLogin.php"><i class="fas fa-tractor"></i>🌿 Farmer</a></li>
+              <li><a href="./OfficerLogin.php"><i class="fas fa-user-tie"></i>👔 Officer</a></li>
+              <li><a href="./contact.html"><i class="fas fa-envelope"></i>📩 Contact</a></li>
+              <li><a href="./chat.php">🤖 ChatAI</a></li>
+          </ul>
+          <div class="logo">
+              <img src="images/nationallogo.jpg" alt="Right Logo">
+          </div>
+      </nav>
+  </header>
+    <h1>Fertilizer Description</h1>
+  </header>
+
+  <section id="fertilizer-list">
+    <!-- Fertilizer list will be populated here -->
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Fertilizer Management</p>
+  </footer>
+
+  <script>
+    // Fertilizer data with detailed benefits
+    const fertilizers = [
+      {
+        fertID: 1,
+        fertName: 'Urea',
+        description: 'Nitrogen-rich fertilizer that promotes leaf growth and overall plant development.',
+    
+        benefits: [
+          'Promotes fast plant growth, especially leaf development.',
+          'Improves overall green color of plants.',
+          'Enhances nitrogen content in the soil.'
+        ]
+      },
+      {
+        fertID: 2,
+        fertName: 'DAP',
+        description: 'Di-Ammonium Phosphate, ideal for root development and early plant growth.',
+        
+        benefits: [
+          'Helps in early seedling growth.',
+          'Improves root formation and development.',
+          'Boosts flower and fruit production.'
+        ]
+      },
+      {
+        fertID: 3,
+        fertName: 'MOP',
+        description: 'Muriate of Potash, enhances fruit quality and strengthens plant resistance.',
+        
+        benefits: [
+          'Improves plant disease resistance.',
+          'Enhances fruit color and quality.',
+          'Increases plant stress tolerance.'
+        ]
+      },
+      {
+        fertID: 4,
+        fertName: 'NPK 10:26:26',
+        description: 'Balanced fertilizer containing Nitrogen, Phosphorus, and Potassium for overall growth.',
+        
+        benefits: [
+          'Encourages overall plant growth.',
+          'Improves fruit and vegetable yields.',
+          'Helps in efficient photosynthesis and energy production.'
+        ]
+      },
+      {
+        fertID: 5,
+        fertName: 'Super Phosphate',
+        description: 'Promotes strong root systems and improves crop yield.',
+        
+        benefits: [
+          'Enhances root growth and crop establishment.',
+          'Improves flowering and fruiting.',
+          'Increases crop yields and quality.'
+        ]
+      },
+      {
+        fertID: 6,
+        fertName: 'Organic Compost',
+        description: 'Eco-friendly fertilizer that improves soil fertility and plant health.',
+        
+        benefits: [
+          'Improves soil texture and structure.',
+          'Enhances microbial activity in the soil.',
+          'Provides essential nutrients in an organic form.'
+        ]
+      },
+      {
+        fertID: 7,
+        fertName: 'Ammonium Sulfate',
+        description: 'Provides essential nitrogen and sulfur for crop growth.',
+        
+        benefits: [
+          'Helps in protein synthesis in plants.',
+          'Promotes leaf and stem growth.',
+          'Helps improve the nitrogen content of soil.'
+        ]
+      },
+      {
+        fertID: 8,
+        fertName: 'Vermicompost',
+        description: 'Organic fertilizer made from decomposed plant and animal waste.',
+       
+        benefits: [
+          'Improves soil fertility and structure.',
+          'Enhances plant disease resistance.',
+          'Provides nutrients in a slow-release form.'
+        ]
+      },
+      {
+        fertID: 9,
+        fertName: 'Calcium Nitrate',
+        description: 'Fertilizer used for supplying calcium and nitrogen to plants.',
+        
+        benefits: [
+          'Improves fruit set and quality.',
+          'Helps prevent blossom-end rot in tomatoes.',
+          'Strengthens cell walls and enhances plant structure.'
+        ]
+      },
+      {
+        fertID: 10,
+        fertName: 'Magnesium Sulfate',
+        description: 'Also known as Epsom salt, it helps plants absorb other nutrients.',
+       
+        benefits: [
+          'Improves photosynthesis in plants.',
+          'Enhances the color of leaves and fruits.',
+          'Prevents yellowing of leaves and promotes plant growth.'
+        ]
+      },
+      {
+        fertID: 11,
+        fertName: 'Borax',
+        description: 'A source of boron, an essential micronutrient for plants.',
+        
+        benefits: [
+          'Improves plant health and overall development.',
+          'Helps with cell wall formation.',
+          'Essential for flowering and fruiting.'
+        ]
+      },
+      {
+        fertID: 12,
+        fertName: 'Seaweed Extract',
+        description: 'A natural liquid fertilizer derived from seaweed, promoting growth and resistance.',
+       
+        benefits: [
+          'Enhances root development and soil health.',
+          'Promotes stronger plant resistance to disease.',
+          'Boosts flowering and fruit production.'
+        ]
+      }
+    ];
+
+    window.onload = function() {
+      const fertilizerList = document.getElementById('fertilizer-list');
+      
+      fertilizers.forEach(fertilizer => {
+        const card = document.createElement('div');
+        card.classList.add('fertilizer-card', fertilizer.fertName.toLowerCase().replace(/\s/g, '-'));
+
+        card.innerHTML = `
+          <h2>${fertilizer.fertName}</h2>
+          <p>${fertilizer.description}</p>
+          <div class="benefits">
+            <h3>Benefits:</h3>
+            <ul>
+              ${fertilizer.benefits.map(benefit => `<li>${benefit}</li>`).join('')}
+            </ul>
+          </div>
+        `;
+
+        fertilizerList.appendChild(card);
+      });
+    };
+  </script>
+</body>
+</html>
