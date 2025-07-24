@@ -1,0 +1,201 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAF3E0; /* Light beige */
+    display: flex;
+    height: 100vh; /* Ensures the full height of the screen is used */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px; /* Increase width for better space and readability */
+    background-color: olivedrab; /* Olive green */
+    color: white;
+    height: 100%; /* Full height */
+    padding: 20px 15px; /* Adjusted padding for better spacing */
+    border-right: 2px solid #333; /* Darker border for better contrast */
+    position: fixed; /* Keeps the sidebar fixed on the screen */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures the sidebar stays on top */
+    transition: width 0.3s ease-in-out; /* Smooth transition for expanding/collapsing */
+}
+
+
+/* Sidebar Links Styling */
+.sidebar ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px; /* Adds spacing between items */
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* Text color */
+    transition: background-color 0.3s ease;
+}
+
+/* Sidebar Links - Hover Effect */
+.sidebar ul li a:hover {
+    background-color: #4CAF50; /* Green background on hover */
+}
+
+/* Sidebar Icon Styling */
+.sidebar ul li a i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 18px; /* Icon size */
+}
+
+
+/* Active Link Styling */
+.sidebar ul li a.active {
+    background-color: #45a049; /* Darker green for active link */
+}
+
+/* Sidebar Logo */
+.sidebar .logo h2 {
+    text-align: center;
+    color: #F4E1C1; /* Soft beige */
+    height: 35px;
+}
+
+.sidebar .logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%; /* Adjust width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px; /* Leaves space for the fixed sidebar */
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto; /* Allows scrolling if the content exceeds the screen */
+    margin-top: 20px; /* Adds some space at the top */
+}
+
+/* Header */
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Profile Section */
+.profile-container {
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px gray;
+    background-color: #fff;
+}
+
+/* Profile Section */
+.profile-container img {
+    display: block;
+    width: 250px; /* Adjust the width as needed */
+    height: 250px; /* Adjust the height as needed */
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 10px auto;
+    border: 2px solid black;
+}
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.profile-table th, .profile-table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Form Styling */
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+form label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Table Styling for Previous Inspections */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+/* Section Display */
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Sidebar Links Styling */
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subsidized Fertilization Distribution</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <span><i class="fas fa-landmark"></i> Government of India, Ministry of Agriculture & Farmers Welfare</span>
+    </div>
+
+    <!-- Navigation -->
+<nav>
+    <div class="logo">
+        <img src="images/firm_logo1.png" alt="Logo">
+    </div>
+    <ul>
+        <li><a href="./index.html">🏡 Home</a></li>
+        <li><a href="./aboutUs.html">ℹ️ About</a></li>
+        <li><a href="./FarmerLogin.php">🌿 Farmers</a></li>
+        <li><a href="./OfficerLogin.php">👔 Officers</a></li>
+        <li><a href="./contact.html">📩 Contact</a></li>
+        <li><a href="./chat.php">🤖 ChatAI</a></li>
+        <li><a href="./fertilizers.html">ℹ️ fertilizers</a></li>
+    </ul>
+    <div class="logo">
+        <img src="images/nationallogo.jpg" alt="Ministry Logo">
+    </div>
+</nav>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Subsidized Fertilizer Distribution System</h1>
+            <p>Ensuring fair and timely distribution of fertilizers to farmers.</p>
+            <!-- Button to Toggle Gallery -->
+            <button onclick="toggleGallery()" class="btn">🌿 Explore Gallery</button>
+            
+            <!-- Gallery Section (Initially Hidden) -->
+            <div id="gallery" class="gallery">
+                <img src="images/farmer4.jpg" alt="Minister">
+                <img src="images/farmer2.jpg" alt="Farmer">
+                <img src="images/farmer1.jpg" alt="Farmer">
+
+            </div>
+        </div>
+    </section>
+
+     <!-- Slideshow Section -->
+     <section id="slideshow">
+        <h2>🌿 Growth of Nation Depends on Its Soil!</h2>
+
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="images/farmer2.jpg" alt="Slide 1">
+            </div>
+            <div class="slide fade">
+                <img src="images/farmer4.jpg" alt="Slide 2">
+            </div>
+            <div class="slide fade">
+                <img src="images/farmer1.jpg" alt="Slide 3">
+            </div>
+
+            <!-- Navigation Buttons -->
+            <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+            <span class="next" onclick="changeSlide(1)">&#10095;</span>
+        </div>
+
+        <!-- Dots for Navigation -->
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+    <!-- Government Support Section -->
+    <section class="gov-support">
+        <h2>🌱 Government Support for Farmers</h2>
+        <div class="support-grid">
+            <div class="card">
+                <i class="fa fa-seedling"></i>
+                <h3>Subsidized Fertilizers</h3>
+                <p>Urea, DAP, and other fertilizers at subsidized rates.</p>
+            </div>
+            <div class="card">
+                <i class="fa fa-rupee-sign"></i>
+                <h3>Financial Aid</h3>
+                <p>PM-KISAN & other financial schemes to support farmers.</p>
+            </div>
+            <div class="card">
+                <i class="fa fa-book-open"></i>
+                <h3>Training & Research</h3>
+                <p>Modern techniques for sustainable farming.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos">
+        <h2>Watch Videos</h2>
+        <div class="video-container">
+            <video controls>
+                <source src="videos/farmer_video.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <!--history-->
+ <!-- History Button -->
+<!-- History Button -->
+<button id="historyBtn" class="history-btn">Show Our History</button>
+
+<!-- Hidden History Section -->
+<div id="historySection" class="history-content">
+    <h3 class="history-title">Our Journey Through Time</h3>
+
+    <p>
+        Fertilizers have always been pivotal in strengthening the agricultural backbone of our nation. Recognizing their critical role, the government initiated numerous subsidy schemes to empower farmers. However, obstacles like <span class="highlight">corruption</span>, <span class="highlight">unequal distribution</span>, and <span class="highlight">process delays</span> often hindered progress.
+    </p>
+
+    <div class="history-highlight">
+        <h4>The Turning Point</h4>
+        <p>
+            To overcome these challenges, the <strong>Subsidized Fertilization Distribution Management System</strong> was introduced. This digital system brought a wave of transformation by ensuring transparency, traceability, and accountability in fertilizer distribution.
+        </p>
+    </div>
+
+    <p>
+        Since its inception, the system has empowered millions of farmers to access fertilizers at subsidized rates, simplifying the journey from <span class="highlight">registration</span> to <span class="highlight">distribution</span>. As it continues to evolve, it integrates the latest technologies and aligns with updated government policies to ensure lasting agricultural prosperity.
+    </p>
+</div>
+  
+
+    <!-- Footer -->
+    
+       
+    <footer style="background-color: darkgreen;">
+       
+        <!-- Existing Content -->
+        <h2>Know More About Us</h2>
+        <button class="accordion">✨ What Makes Us Different from Others?</button>
+        <div class="panel">
+          <p>
+              Unlike traditional fertilizer distribution systems that suffer from delays, corruption, and inefficiencies, we provide:
+          </p>
+          <ul style="color: aliceblue;">
+              <li>✅ <strong>Digital & Transparent Process:</strong> No hidden charges, no black marketing—farmers can track their requests in real time.</li>
+              <li>✅ <strong>Role-Based Access:</strong> Officers at different levels ensure smooth, systematic distribution without manipulation.</li>
+              <li>✅ <strong>Fair Subsidy Allocation:</strong> Farmers receive the right amount of fertilizers based on their land area and crop needs.</li>
+              <li>✅ <strong>Instant Notifications & Updates:</strong> Farmers stay informed about stock availability, application status, and government schemes.</li>
+              <li>✅ <strong>Quality Control Measures:</strong> Ensures only high-quality fertilizers are supplied, reducing soil damage and improving yields.</li>
+              <li>✅ <strong>24/7 Support & Complaint Redressal:</strong> Farmers can reach out anytime for assistance, ensuring their concerns are addressed.</li>
+          </ul>
+          <p style="color: aliceblue;">
+              We are not just a system—we are a mission to empower farmers with a fair, hassle-free, and efficient way to access what they rightfully deserve.
+          </p>
+      </div>
+        <button class="accordion">🌿 What Good Does It Do to Farmers?</button>
+        <div class="panel">
+          <p style="color: aliceblue;">
+            Our platform is built for farmers to bring maximum benefits with minimal effort:
+        </p>
+        <ul style="color: aliceblue;">
+            <li>✔ <strong>Saves Time & Effort:</strong> No need to visit multiple offices—farmers can apply for subsidies and track their applications from home.</li>
+            <li>✔ <strong>Prevents Exploitation:</strong> Eliminates middlemen and prevents overpricing or stock hoarding.</li>
+            <li>✔ <strong>Improves Agricultural Productivity:</strong> Ensures timely fertilizer supply, leading to better yields and higher income.</li>
+            <li>✔ <strong>Provides Financial Relief:</strong> Subsidized rates reduce financial burdens, making fertilizers affordable.</li>
+            <li>✔ <strong>Ensures Government Support Reaches the Right Hands:</strong> Direct verification and approval prevent corruption and misallocation.</li>
+        </ul>
+        <p style="color: aliceblue;">
+            Through this system, farmers gain access, control, and empowerment—ensuring their hard work translates into better harvests and financial stability.
+        </p>
+        </div>
+        <button class="accordion">✅ Do You Think We Are Trusted?</button>
+        <div class="panel">
+          <p style="color: aliceblue;">Yes! Backed by government regulations, real-time tracking, and verified officer approvals, our system ensures transparency and trustworthiness.</p>
+          <ul style="color: aliceblue;">
+            <li>✅ <strong>Government Regulation & Oversight:</strong> Ensuring fairness and legality.</li>
+            <li>✅ <strong>Verified & Accountable Officer System:</strong> Multiple levels of approval reduce fraud and errors.</li>
+            <li>✅ <strong>Thousands of Successful Transactions:</strong> Farmers across the country have already benefited.</li>
+            <li>✅ <strong>Real-time Tracking & Transparency:</strong> No hidden processes—farmers always know where their application stands.</li>
+            <li>✅ <strong>Strong Security Measures:</strong> Protecting farmer data and ensuring privacy.</li>
+        </ul>
+        <p style="color: aliceblue;">
+            Farmers and officers trust us because we deliver results. Our focus is to serve, support, and sustain the backbone of our economy—the farmers.
+        </p>
+        <p style="color: aliceblue;">
+            If you’re a farmer, you can rely on us for timely, fair, and transparent fertilizer distribution.
+        </p>
+        </div> 
+
+
+        
+     <!-- Contact Section -->
+     <div class="footer-container">
+        <div class="footer-section">
+            <h3>🌱 About Us</h3>
+            <p>We streamline fertilizer distribution for efficient and sustainable farming.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>🔗 Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>📞 Contact</h3>
+            <p><i class="fas fa-envelope"></i> support@fertilizerdistribution.com</p>
+            <p><i class="fas fa-phone"></i> +123 456 7890</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>🌍 Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="jsfiles/index.js"></script>
+   
+</body>
+</html>
